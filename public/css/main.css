@@ -1,0 +1,37 @@
+body {
+	background-color: #f0f0f0;
+}
+p,
+h1,
+h2 {
+	color: black;
+	font-family: 'Roboto', sans-serif;
+}
+p {
+	font-family: 'Roboto', sans-serif;
+}
+nav {
+	background-color: #cdcdcd; /* #222222;*/
+	margin-bottom: 50px;
+}
+a.nav-link {
+	color: black;
+}
+
+.btn-outline-secondary {
+	margin-right: 15px;
+}
+.navbar-toggler {
+	color: black;
+}
+.footer-content {
+	padding-top: 10px;
+}
+.content {
+	background: #f0f0f0;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+footer {
+	text-align: center;
+}
