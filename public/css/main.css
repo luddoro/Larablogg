@@ -21,17 +21,18 @@ a.nav-link {
 .btn-outline-secondary {
 	margin-right: 15px;
 }
+.btn-primary {
+	margin-left: 10px;
+}
 .navbar-toggler {
 	color: black;
 }
-.footer-content {
-	padding-top: 10px;
-}
+
 .content {
 	background: #f0f0f0;
 	padding: 20px;
 	margin-bottom: 10px;
 }
-footer {
-	text-align: center;
+.form-control {
+	margin-left: 10px;
 }

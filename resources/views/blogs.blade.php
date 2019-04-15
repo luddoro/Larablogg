@@ -1,19 +1,10 @@
 @extends('layout')
 @section('content')
+<a class="btn btn-info" href="blogs/create">Skapa inlägg</a>
+@foreach ($blogs as $blog)
+    <li> {{$blog->title}} </li>
+    <li> {{$blog->description}} </li>
+@endforeach 
 
-<header class="text-center">
-    <h1 class="header-title"> Test för projekt att skapa en blog i laravel </h1>
-        </span>
-    </h1>
+@endsection 
     
-    
-    <div class="main-content">
-        <div class="container">
-            <div class="content">
-                <h3>Basic Routing och setup.</h3>
-                <p>Jag har fixat basic routing till sidan. Fixat en bootstrap navbar samt en login med laravels Auth funktion. Hittils har allting gått bra.</p>
-            </div>
-        </div>
-    </div>
-</header>
-@endsection
