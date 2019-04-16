@@ -21,9 +21,7 @@ a.nav-link {
 .btn-outline-secondary {
 	margin-right: 15px;
 }
-.btn-primary {
-	margin-left: 10px;
-}
+
 .navbar-toggler {
 	color: black;
 }
@@ -34,6 +32,8 @@ a.nav-link {
 	margin-bottom: 10px;
 }
 .form-control,
-label {
+label,
+.btn-primary,
+.btn-danger {
 	margin-left: 10px;
 }

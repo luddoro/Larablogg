@@ -43,8 +43,14 @@ class PagesController extends Controller
         return view('edit', compact('Blogs'));
 
     }
-    public function update() {
-        dd('hello');
+    public function update($id) {
+        $Blogs = Blogs::find($id);
+        $Blogs->title = request('title');
+        $Blogs->title = request('description');
+
+        $Blogs->save();
+
+        return redirect('blogs');
     }
     public function destroy() {
 

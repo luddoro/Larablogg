@@ -15,7 +15,7 @@ Route::get('/blogs/create', 'PagesController@create');
 Route::post('/blogs', 'PagesController@store');
 Route::get('/blogs/{blogs}', 'PagesController@show');
 Route::get('/blogs/{blogs}/edit', 'PagesController@edit');
-Route::patch('/blogs/{blogs}', 'PagesController@update');
+Route::patch('/blogs/{Blogs}', 'PagesController@update');
 route::delete('/blogs/{blogs}', 'PagesController@destroy');
 
 

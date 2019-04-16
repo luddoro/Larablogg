@@ -1,10 +1,11 @@
 @extends('layouts.layout')
 @section('content')
-<a class="btn btn-info" href="blogs/create">Skapa inlägg</a>
+
 @foreach ($blogs as $blog)
     <li> {{$blog->title}} </li>
-    <li> {{$blog->description}} </li>
+    
 @endforeach 
-
+<a class="btn btn-info" href="blogs/create">Skapa inlägg</a>
+<a class="btn btn-info" href="blogs/1/edit">Skapa inlägg</a>
 @endsection 
     

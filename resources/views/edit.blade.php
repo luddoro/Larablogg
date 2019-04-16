@@ -1,8 +1,11 @@
 @extends('layouts.layout')
 @section('content')
-<h1> Redigera inlägg </h1>
-    <form method="POST" action="/blogs">
+    <h1> Redigera inlägg </h1>
+
+
+        <form method="POST" action="/blogs/{{$Blogs->id}}">
         
+        {{ method_field('PATCH')}}
         {{csrf_field()}}
         <div class="form-group">
             <label for="title">Titel</label>
@@ -18,4 +21,9 @@
         </div> 
         </div>  
     </form>
+
+
+
+
+  
 @endsection 
