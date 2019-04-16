@@ -22,6 +22,12 @@
         </div>  
     </form>
 
+    <form method="POST" action = "/blogs/{{$Blogs->id}}">
+        {{ method_field('DELETE')}}
+        {{ csrf_field() }}
+        <button type="submit" class="btn btn-danger">Radera</button>
+    </form>
+
 
 
 

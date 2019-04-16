@@ -6,6 +6,6 @@
     
 @endforeach 
 <a class="btn btn-info" href="blogs/create">Skapa inlägg</a>
-<a class="btn btn-info" href="blogs/1/edit">Skapa inlägg</a>
+<a class="btn btn-info" href="blogs/1/edit">Redigera inlägg</a>
 @endsection 
     
