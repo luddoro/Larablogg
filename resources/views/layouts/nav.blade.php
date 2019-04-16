@@ -3,7 +3,7 @@
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"> <a class="nav-link" href="/index">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/blogs">Your Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/blogs">Blog list</a></li>
           <li class="nav-item"><a class="nav-link" href="/info">Info</a>
             
           </li>

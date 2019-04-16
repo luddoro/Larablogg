@@ -1,5 +1,5 @@
 body {
-	background-color: #f0f0f0;
+	background-color: #dcdcdc;
 }
 p,
 h1,
@@ -11,7 +11,7 @@ p {
 	font-family: 'Roboto', sans-serif;
 }
 nav {
-	background-color: #cdcdcd; /* #222222;*/
+	background-color: white; /* #222222;*/
 	margin-bottom: 50px;
 }
 a.nav-link {
@@ -27,7 +27,7 @@ a.nav-link {
 }
 
 .content {
-	background: #f0f0f0;
+	background: #fff;
 	padding: 20px;
 	margin-bottom: 10px;
 }
