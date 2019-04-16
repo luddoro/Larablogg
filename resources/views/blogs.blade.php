@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 @section('content')
 <a class="btn btn-info" href="blogs/create">Skapa inlägg</a>
 @foreach ($blogs as $blog)

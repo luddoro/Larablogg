@@ -10,14 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/blogs/create', 'PagesController@create');
+Route::post('/blogs', 'PagesController@store');
+Route::get('/blogs/{blogs}', 'PagesController@show');
+Route::get('/blogs/{blogs}/edit', 'PagesController@edit');
+Route::patch('/blogs/{blogs}', 'PagesController@update');
+route::delete('/blogs/{blogs}', 'PagesController@destroy');
+
+
 Route::get('/', 'PagesController@welcome');
 Route::get('/index', 'PagesController@index');
 Route::get('/blogs', 'PagesController@blogs');
 Route::get('/info', 'PagesController@info');
-Route::get('/blogs/create', 'PagesController@create');
 
 
-Route::post('/blogs', 'PagesController@store');
+
 
 Auth::routes();
 

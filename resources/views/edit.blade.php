@@ -1,22 +1,21 @@
 @extends('layouts.layout')
 @section('content')
-
-
-    <h1> Skapa ditt nya inlägg </h1>
+<h1> Redigera inlägg </h1>
     <form method="POST" action="/blogs">
+        
         {{csrf_field()}}
         <div class="form-group">
             <label for="title">Titel</label>
-                <input class="form-control" type="text" name="title" placeholder="Inläggs titel.">
+                <input class="form-control" type="text" name="title" placeholder="Inläggs titel." value="{{$Blogs->title}}">
         </div>
         
         <div class="form-group">
             <label for="title">Description</label>
-                <textarea class="form-control" name="description" placeholder="description"></textarea>
+                <textarea class="form-control" name="description">{{$Blogs->description}}</textarea>
         </div>
         <div>
-            <button type="submit" class="btn btn-primary">Ladda upp</button>
+            <button type="submit" class="btn btn-primary">Redigera</button>
         </div> 
         </div>  
     </form>
-@endsection
+@endsection 
