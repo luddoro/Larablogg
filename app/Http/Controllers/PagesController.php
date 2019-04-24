@@ -46,7 +46,7 @@ class PagesController extends Controller
     public function update($id) {
         $Blogs = Blogs::find($id);
         $Blogs->title = request('title');
-        $Blogs->title = request('description');
+        $Blogs->description = request('description');
 
         $Blogs->save();
 
