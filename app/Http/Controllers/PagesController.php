@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 class PagesController extends Controller 
 {
 
+    public function __construct(){
+        $this->middleware('auth')->except('index');
+    }
+
     public function welcome() { //localhost/
         return view('welcome');
     }
@@ -18,7 +22,7 @@ class PagesController extends Controller
     }
 
     public function blogs() { //localhost/blogs
-        $blogs = Blogs::all();
+        $blogs = Blogs::where('userid', auth()->id())->get(); //select * from blogs where userid = auth_id
         return view('blogs', compact('blogs'));
     }
 
@@ -32,9 +36,14 @@ class PagesController extends Controller
     }
 
     public function store() {
-        
-        Blogs::create(request()->all());
-        return redirect('/blogs');
+    
+        $user = request()->all() + ['userid' => auth()->id()];
+        Blogs::create($user);
+        return redirect('/blogs');    
+    }
+    
+    public function show() {
+    
     }
 
     public function edit($id) {

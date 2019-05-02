@@ -1,11 +1,12 @@
 @extends('layouts.layout')
 @section('content')
-    <a class="btn btn-info" href="blogs/create">Skapa inlägg</a>
-    <a class="btn btn-info" href="blogs/1/edit">Redigera inlägg</a>
+    
 
     <div class="main-content">
         <div class="container">
             <div class="content">
+                    <a class="btn btn-primary" href="/blogs/create">Skapa inlägg</a>
+                    <a class="btn btn-primary" href="blogs/1/edit">Redigera inlägg</a>
                 <header class="text-center">
                     <h1>Lista av blogginlägg</h1>
                 </header>
