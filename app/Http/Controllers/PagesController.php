@@ -36,7 +36,12 @@ class PagesController extends Controller
     }
 
     public function store() {
-    
+        request()->validate([
+            'title'=>'required',
+            'description'=>'required'
+            ]);
+
+
         $user = request()->all() + ['userid' => auth()->id()];
         Blogs::create($user);
         return redirect('/blogs');    

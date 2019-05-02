@@ -8,7 +8,7 @@
                     <a class="btn btn-primary" href="/blogs/create">Skapa inlägg</a>
                     <a class="btn btn-primary" href="blogs/1/edit">Redigera inlägg</a>
                 <header class="text-center">
-                    <h1>Lista av blogginlägg</h1>
+                    <h1>Lista av dina blogginlägg</h1>
                 </header>
                         
             @foreach ($blogs as $blog)

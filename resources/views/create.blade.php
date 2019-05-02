@@ -7,16 +7,27 @@
         {{csrf_field()}}
         <div class="form-group">
             <label for="title">Titel</label>
-                <input class="form-control" type="text" name="title" placeholder="Inläggs titel.">
+                <input class="form-control" type="text" name="title" placeholder="Inläggs titel." required>
         </div>
         
         <div class="form-group">
             <label for="title">Description</label>
-                <textarea class="form-control" name="description" placeholder="description"></textarea>
+                <textarea class="form-control" name="description" placeholder="description" required></textarea>
         </div>
         <div>
             <button type="submit" class="btn btn-primary">Ladda upp</button>
         </div> 
-        </div>  
-    </form>
+
+        @if ($errors->any())
+        <ul>
+
+            @foreach ($errors->all() as $error)
+                <li> {{$error}} </li>
+            
+            @endforeach
+
+        </ul>
+
+        @endif
+     </form>
 @endsection
