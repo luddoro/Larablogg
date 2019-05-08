@@ -14,7 +14,7 @@
 
             @endforeach 
            
-            <a class="btn btn-primary" href="/blogs/create">Skapa inlägg</a>
+            <a class="btn btn-primary" href="/blogs/create">Skapa inlägg</a>    
             </div>
         </div>
     </div

@@ -42,32 +42,34 @@ class PagesController extends Controller
             ]);
 
 
-        $user = request()->all() + ['userid' => auth()->id()];
-        Blogs::create($user);
+        $request = request()->all() + ['userid' => auth()->id()];
+        Blogs::create($request);
         return redirect('/blogs');    
     }
     
-    public function show() {
-    
+    public function show($id) {
+    $blogs = Blogs::find($id);
+    return view('blogpost');
     }
 
     public function edit($id) {
 
-        $Blogs = Blogs::find($id);
-        return view('edit', compact('Blogs'));
+        $blogs = Blogs::find($id);
+        return view('edit', compact('blogs'));
+        
 
     }
     public function update($id) {
-        $Blogs = Blogs::find($id);
-        $Blogs->title = request('title');
-        $Blogs->description = request('description');
+        $blogs = Blogs::find($id);
+        $blogs->title = request('title');
+        $blogs->description = request('description');
 
-        $Blogs->save();
+        $blogs->save();
 
         return redirect('blogs');
     }
     public function destroy($id) {
-        $Blogs= Blogs::find($id)->delete();
+        $blogs= Blogs::find($id)->delete();
 
         return redirect('/blogs');
     }
