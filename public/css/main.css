@@ -39,17 +39,17 @@ a.nav-link {
 	margin-bottom: 10px;
 }
 .form-control,
-label,
-.btn-primary,
-.btn-danger {
-	margin-left: 10px;
+label
+ {
+	margin-bottom: 10px;
 }
 .btn-gold {
 	background-color: #EEC584;
 	color: black;
-	margin-right: 10px;
+	margin-bottom:10px;
+	
 }
 
-.navbar-toggler-icon {
+.navbar-toggler {
 	background-color: #EEC584;
 }

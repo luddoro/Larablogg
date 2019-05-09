@@ -11,12 +11,12 @@
 
                     <div class="form-group">
                         <label for="title">Titel</label>
-                            <input class="form-control" type="text" name="title" placeholder="Inläggs titel." value="{{$blogs->title}}">
+                            <input class="form-control" type="text" name="title" id=title placeholder="Inläggs titel." value="{{$blogs->title}}">
                     </div>
                 
                     <div class="form-group">
-                        <label for="title">Description</label>
-                            <textarea class="form-control" name="description">{{$blogs->description}}</textarea>
+                        <label for="descriptiondit">Description</label>
+                            <textarea class="form-control" name="description" id=description>{{$blogs->description}}</textarea>
                         </div>
                     
 
