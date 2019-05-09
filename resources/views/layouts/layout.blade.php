@@ -7,19 +7,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<title>Blogg</title>
-		@include('layouts.nav')
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 <body>
-
+	@include('layouts.nav')
     <div class="main-content">
         <div class="container">
             <div class="content">
                 <header class="text-center">
-                    @yield('content')
-                    @include('layouts.footer')
-
+					@yield('content')
+				</header>
+				@include('layouts.footer')
             </div>
         </div>
       </div>

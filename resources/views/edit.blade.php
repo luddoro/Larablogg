@@ -2,7 +2,7 @@
 @section('content')
     
                     <h1> Redigera inlägg </h1>
-                </header>
+                
 
                 <form method="POST" action="/blogs/{{$blogs->id}}">
                     {{ method_field('PATCH')}}
