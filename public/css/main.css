@@ -48,6 +48,8 @@ label,
 	background-color: #EEC584;
 	color: black;
 	margin-right: 10px;
-	
-	
+}
+
+.navbar-toggler-icon {
+	background-color: #EEC584;
 }
