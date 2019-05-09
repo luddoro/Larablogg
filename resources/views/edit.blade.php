@@ -1,9 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="main-content">
-        <div class="container">
-            <div class="content">
-                <header class="text-center">
+    
                     <h1> Redigera inlägg </h1>
                 </header>
 
@@ -23,7 +20,7 @@
                         </div>
                     
 
-                    <button type="submit" class="btn btn-primary">Redigera</button>
+                    <button type="submit" class="btn btn-gold">Redigera</button>
                 </form>
 
             <form class="form-group" method="POST" action = "/blogs/{{$blogs->id}}">
@@ -31,9 +28,7 @@
                 {{ csrf_field() }}
                 <button type="submit" class="btn btn-danger">Radera</button>
             </form>
-        </div>
-    </div>
-</div>
+
 
 
 

@@ -1,9 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="main-content">
-        <div class="container">
-            <div class="content">
-                <header class="text-center">
+
 
                     <h1> Skapa ditt nya inlägg </h1>
                 </header>
@@ -34,8 +31,6 @@
 
                     @endif
                 </form>
-            </div>
-        </div>
-    </div>
+
 
             @endsection
