@@ -7,6 +7,9 @@ h2 {
 	color: black;
 	font-family: 'Roboto', sans-serif;
 }
+h1 {
+	margin-bottom: 0.5em ;
+}
 p {
 	font-family: 'Roboto', sans-serif;
 }
@@ -39,4 +42,11 @@ label,
 .btn-primary,
 .btn-danger {
 	margin-left: 10px;
+}
+.btn-gold {
+	background-color: #EEC584;
+	color: black;
+	margin-right: 10px;
+	
+	
 }

@@ -1,33 +1,41 @@
 @extends('layouts.layout')
 @section('content')
+    <div class="main-content">
+        <div class="container">
+            <div class="content">
+                <header class="text-center">
 
+                    <h1> Skapa ditt nya inlägg </h1>
+                </header>
+                <form method="POST" action="/blogs">
+                    {{csrf_field()}}
+                    <div class="form-group">
+                        <label for="title">Titel</label>
+                            <input class="form-control" type="text" name="title" placeholder="Inläggs titel." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Description</label>
+                            <textarea class="form-control" name="description" placeholder="description" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-gold">Ladda upp</button>
+                    </div> 
 
-    <h1> Skapa ditt nya inlägg </h1>
-    <form method="POST" action="/blogs">
-        {{csrf_field()}}
-        <div class="form-group">
-            <label for="title">Titel</label>
-                <input class="form-control" type="text" name="title" placeholder="Inläggs titel." required>
+                    @if ($errors->any())
+                    <ul>
+
+                        @foreach ($errors->all() as $error)
+                            <li> {{$error}} </li>
+                        
+                        @endforeach
+
+                    </ul>
+
+                    @endif
+                </form>
+            </div>
         </div>
-        
-        <div class="form-group">
-            <label for="title">Description</label>
-                <textarea class="form-control" name="description" placeholder="description" required></textarea>
-        </div>
-        <div>
-            <button type="submit" class="btn btn-primary">Ladda upp</button>
-        </div> 
+    </div>
 
-        @if ($errors->any())
-        <ul>
-
-            @foreach ($errors->all() as $error)
-                <li> {{$error}} </li>
-            
-            @endforeach
-
-        </ul>
-
-        @endif
-     </form>
-@endsection
+            @endsection

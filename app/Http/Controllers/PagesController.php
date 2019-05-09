@@ -9,57 +9,63 @@ use Illuminate\Http\Request;
 class PagesController extends Controller 
 {
 
-    public function __construct(){
+    public function __construct() 
+    {
         $this->middleware('auth')->except('index');
     }
 
-    public function welcome() { //localhost/
-        return view('welcome');
-    }
-    public function index() { //localhost/index
+    public function index() 
+    
+    { //localhost/index
         
         return view('index');
     }
 
-    public function blogs() { //localhost/blogs
+    public function blogs()
+     { //localhost/blogs
         $blogs = Blogs::where('userid', auth()->id())->get(); //select * from blogs where userid = auth_id
         return view('blogs', compact('blogs'));
     }
 
-    public function info() { //localhost/info
+    public function info() 
+    { //localhost/info
         return view('info');
     }
 
-    public function create() {  //localhost/blogs/create
+    public function create() 
+    {  //localhost/blogs/create
         return view('create');
 
     }
 
-    public function store() {
+    public function store()
+     {
         request()->validate([
             'title'=>'required',
             'description'=>'required'
             ]);
-
 
         $request = request()->all() + ['userid' => auth()->id()];
         Blogs::create($request);
         return redirect('/blogs');    
     }
     
-    public function show($id) {
-    $blogs = Blogs::find($id);
-    return view('blogpost');
+    public function show($id)
+     {
+        $blogs = Blogs::find($id);
+        return view('blogpost', compact('blogs'));
     }
 
-    public function edit($id) {
+    public function edit($id) 
+    {
 
         $blogs = Blogs::find($id);
         return view('edit', compact('blogs'));
         
 
     }
-    public function update($id) {
+    public function update($id)
+     {
         $blogs = Blogs::find($id);
         $blogs->title = request('title');
         $blogs->description = request('description');
@@ -68,7 +74,8 @@ class PagesController extends Controller
 
         return redirect('blogs');
     }
-    public function destroy($id) {
+    public function destroy($id)
+     {
         $blogs= Blogs::find($id)->delete();
 
         return redirect('/blogs');

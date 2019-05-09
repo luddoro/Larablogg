@@ -8,18 +8,19 @@
             
           </li>
         </ul>
+        
+        
         <ul class="nav navbar-nav navbar-right">
             @if (Route::has('login'))
               @auth
-                <a class="btn btn-outline-secondary" href="{{ url('/home') }}">Home</a>
+                <a class="btn btn-gold" href="{{ url('/home') }}">Home</a>
             @else
-              <a class="btn btn-outline-secondary" href="{{ route('login') }}">Login</a>
+              <a class="btn btn-gold" href="{{ route('login') }}">Login</a>
             @if (Route::has('register'))
-              <a class="btn btn-outline-secondary" href="{{ route('register') }}">Register</a>
+              <a class="btn btn-gold" href="{{ route('register') }}">Register</a>
             @endif
           @endauth
         @endif
-          </ul>
-          
+        </ul>
     </div>
   </nav>

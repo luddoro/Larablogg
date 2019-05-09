@@ -13,8 +13,8 @@
 
 Route::get('/blogs/create', 'PagesController@create');
 Route::post('/blogs', 'PagesController@store');
-Route::get('/blogs/{blogs}', 'PagesController@show');
-    Route::get('/blogs/{blogs}/edit', 'PagesController@edit')->name('blogs.edit');
+Route::get('/blogs/{blogs}', 'PagesController@show')->name('blogs.show');
+Route::get('/blogs/{blogs}/edit', 'PagesController@edit')->name('blogs.edit');
 Route::patch('/blogs/{Blogs}', 'PagesController@update');
 route::delete('/blogs/{blogs}', 'PagesController@destroy');
 
