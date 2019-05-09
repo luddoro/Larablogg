@@ -10,25 +10,11 @@ h2 {
 h1 {
 	margin-bottom: 0.5em ;
 }
-p {
-	font-family: 'Roboto', sans-serif;
-}
 nav {
 	background-color: white; /* #222222;*/
 	margin-bottom: 50px;
 }
 a.nav-link {
-	color: black;
-}
-
-.btn-outline-secondary {
-	margin-right: 15px;
-}
-.btn-primary {
-	margin-top: 20px;
-}
-
-.navbar-toggler {
 	color: black;
 }
 
@@ -52,4 +38,62 @@ label
 
 .navbar-toggler {
 	background-color: #EEC584;
+}
+.list {
+	list-style:none;
+	font-size: 20px;
+	
+}
+ol {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+ol ol {
+    margin: 0 0 0 2em; /* Add some left margin for inner lists */
+}
+.rounded-list a{
+    position: relative;
+	display: flex;
+	align-items: center;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;   
+}
+
+.rounded-list a:hover{
+    background: #eee;
+}
+
+.rounded-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -1.3em;
+    top: 70%;
+    margin-top: -1.3em;
+    background: #EEC584;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .15em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+	transition: all .3s ease-out;
+	font-size: 20px;
+}
+footer {
+	Display: flex
+align-items: flex-end
 }
