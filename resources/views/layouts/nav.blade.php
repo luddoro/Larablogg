@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
 	<a class="navbar-brand" href="#"> 
-		<img src="/NTI/logotyper/purelogosvart.png" alt="logo"/>
+		<img src="/NTI/logotyper/test.png" alt="logo"/>
   	</a>
   
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

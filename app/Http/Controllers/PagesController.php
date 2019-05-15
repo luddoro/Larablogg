@@ -13,6 +13,9 @@ class PagesController extends Controller
     {
         $this->middleware('auth')->except('index');
     }
+    public function welcome() { //localhost/
+        return view('welcome');
+    }
 
     public function index() //localhost/index
     { 
